@@ -7,7 +7,6 @@ Nom : Gagnon, Xavier; 2237610
 package cartes;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class PaquetDeCartes {
     public static final int NBR_ECHANGE = 100;
@@ -48,12 +47,14 @@ public class PaquetDeCartes {
         paquet.set(posB, carteB);
     }
 
-    public Carte prendreCarte() {
-        return new Carte(SorteCartes.CARREAU, ValeurCartes.V_10); // ***** A CHANGER ********
+    public Carte prendreCarte( int position) {
+        return paquet.remove(position);
     }
 
-    public void retournerTouteLesCartes(boolean valeur) {
-
+    public void retournerTouteLesCartes(boolean visible) {
+        for (int i = 0; i < paquet.size() - 1; i++) {
+            paquet.get(i).setVisible(visible);
+        }
     }
 
     public int size() {
