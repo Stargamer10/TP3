@@ -1,11 +1,11 @@
 package exceptions;
 
 public class PileException extends RuntimeException {
-    PileException() {
+    public PileException() {
         super();
     }
 
-    PileException(String message) {
+    public PileException(String message) {
         super(message);
     }
 }

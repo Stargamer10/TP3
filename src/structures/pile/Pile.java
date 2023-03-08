@@ -1,10 +1,16 @@
 package structures.pile;
 
+import exceptions.PileException;
+
 public class Pile {
     private int taille;
     private NoeudPile sommet;
 
     public Object peek() {
+        if (empty()) {
+            throw new PileException("Le pile est vide - Vous ne pouvez pas reguarder la valeuur");
+        }
+
         return sommet.getElement();
     }
 
@@ -13,8 +19,13 @@ public class Pile {
     }
 
     public Object pop() {
+        if (empty()) {
+            throw new PileException("Le pile est vide - Vous ne pouvez pas enlever une valeur");
+        }
+
         Object r = peek();
         sommet = sommet.getPrecedent();
+        taille--;
         return r;
     }
 
@@ -28,5 +39,7 @@ public class Pile {
         } else {
             sommet = new NoeudPile(obj, sommet);
         }
+
+        taille++;
     }
 }
