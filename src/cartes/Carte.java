@@ -6,8 +6,6 @@ Nom : Gagnon, Xavier; 2237610
  */
 package cartes;
 
-import java.util.Objects;
-
 public class Carte implements Comparable<Carte> {
     static final char IMAGE_DOS = 'I';
 
