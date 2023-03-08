@@ -33,7 +33,7 @@ public class Pile {
         return sommet == null;
     }
 
-    public void psuh(Object obj) {
+    public void push(Object obj) {
         if (empty()) {
             sommet = new NoeudPile(obj);
         } else {
