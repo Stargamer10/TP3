@@ -67,6 +67,6 @@ public class PaquetDeCartes {
     }
 
     private boolean validerPosition(int position) {
-        return true; // ****** À CHANGER *******
+        return 0 <= position && position <= paquet.size() - 1;
     }
 }
