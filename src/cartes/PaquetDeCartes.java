@@ -9,9 +9,11 @@ package cartes;
 import exceptions.ConstructeurException;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class PaquetDeCartes {
     public static final int NBR_ECHANGE = 100;
+    private Random r = new Random();
 
     private ArrayList<Carte> paquet;
 
@@ -33,7 +35,16 @@ public class PaquetDeCartes {
     }
 
     public void brasser() {
-
+        int posA;
+        int posB;
+        for (int i = 0; i < NBR_ECHANGE; i++) {
+            posA = r.nextInt(0, paquet.size() - 1);
+            posB = r.nextInt(0, paquet.size() - 1);
+            while (posB == posA) {
+                posB = r.nextInt(0, paquet.size() - 1);
+            }
+            permuterCarte(posA, posB);
+        }
     }
 
     public Carte consulterCarte(int position) {
@@ -46,7 +57,7 @@ public class PaquetDeCartes {
         return paquet.isEmpty();
     }
 
-    private void permuterCartE(int posA, int posB) {
+    private void permuterCarte(int posA, int posB) {
         Carte carteA = paquet.get(posA);
         Carte carteB = paquet.get(posB);
 
