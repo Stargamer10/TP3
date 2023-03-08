@@ -10,12 +10,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PaquetDeCartes {
-    public static final int NBR_ECAHNGE = 100;
+    public static final int NBR_ECHANGE = 100;
 
     private ArrayList<Carte> paquet;
 
-    public PaquetDeCartes(List<Carte> paquet) {
-
+    public PaquetDeCartes(ArrayList<Carte> paquet) {
+        this.paquet = paquet;
     }
 
     public PaquetDeCartes() {
@@ -33,7 +33,7 @@ public class PaquetDeCartes {
     }
 
     public Carte consulterCarte(int position) {
-        return new Carte(SorteCartes.CARREAU, ValeurCartes.V_10); // ***** A CHANGER ********
+        return paquet.get(position);
     }
 
     public boolean isEmpty() {
