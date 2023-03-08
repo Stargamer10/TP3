@@ -16,7 +16,7 @@ public class PaquetDeCartes {
     private ArrayList<Carte> paquet;
 
     public PaquetDeCartes(ArrayList<Carte> paquet) {
-        if(paquet != null)
+        if (paquet != null)
             this.paquet = paquet;
         else
             throw new ConstructeurException("Un paquet reçu en argument ne peut pas être vide");
@@ -25,8 +25,8 @@ public class PaquetDeCartes {
     public PaquetDeCartes() {
         paquet = new ArrayList<Carte>();
 
-        for(SorteCartes sorte : SorteCartes.values()) {
-            for(ValeurCartes valeur : ValeurCartes.values()) {
+        for (SorteCartes sorte : SorteCartes.values()) {
+            for (ValeurCartes valeur : ValeurCartes.values()) {
                 paquet.add(new Carte(sorte, valeur));
             }
         }
@@ -37,7 +37,9 @@ public class PaquetDeCartes {
     }
 
     public Carte consulterCarte(int position) {
-        return paquet.get(position);
+        if (validerPosition(position) && !isEmpty()) {
+            return paquet.get(position);
+        } else return null;
     }
 
     public boolean isEmpty() {
@@ -52,12 +54,10 @@ public class PaquetDeCartes {
         paquet.set(posB, carteB);
     }
 
-    public Carte prendreCarte( int position) {
+    public Carte prendreCarte(int position) {
         if (!paquet.isEmpty() && validerPosition(position)) {
             return paquet.remove(position);
-        } else {
-            return null;
-        }
+        } else return null;
     }
 
     public void retournerTouteLesCartes(boolean visible) {
