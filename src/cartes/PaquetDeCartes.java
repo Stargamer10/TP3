@@ -41,7 +41,11 @@ public class PaquetDeCartes {
     }
 
     private void permuterCartE(int posA, int posB) {
+        Carte carteA = paquet.get(posA);
+        Carte carteB = paquet.get(posB);
 
+        paquet.set(posA, carteA);
+        paquet.set(posB, carteB);
     }
 
     public Carte prendreCarte() {
