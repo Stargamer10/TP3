@@ -6,6 +6,8 @@ Nom : Gagnon, Xavier; 2237610
  */
 package cartes;
 
+import java.util.Objects;
+
 public class Carte implements Comparable<Carte> {
     static final char IMAGE_DOS = 'I';
 
@@ -38,6 +40,14 @@ public class Carte implements Comparable<Carte> {
         return valeur.getSymbole();
     }
 
+    private void setSorte(SorteCartes sorte) {
+        this.sorte = sorte;
+    }
+
+    private void setValeur(ValeurCartes valeur) {
+        this.valeur = valeur;
+    }
+
     public void setVisible(boolean visible) {
         this.visible = visible;
     }
@@ -60,7 +70,19 @@ public class Carte implements Comparable<Carte> {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Carte carte = (Carte) o;
+        return visible && carte.visible && sorte == carte.sorte && valeur == carte.valeur;
+    }
+
+    @Override
     public int compareTo(Carte o) {
-        return 0;
+        if (this.equals(o)) {
+            return valeur.compareTo(o.valeur);
+        } else {
+            return sorte.compareTo(o.sorte);
+        }
     }
 }
