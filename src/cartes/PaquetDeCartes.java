@@ -13,7 +13,7 @@ import java.util.Random;
 
 public class PaquetDeCartes {
     public static final int NBR_ECHANGE = 100;
-    private Random r = new Random();
+    private final Random r = new Random();
 
     private ArrayList<Carte> paquet;
 
@@ -25,7 +25,7 @@ public class PaquetDeCartes {
     }
 
     public PaquetDeCartes() {
-        paquet = new ArrayList<Carte>();
+        paquet = new ArrayList<>();
 
         for (SorteCartes sorte : SorteCartes.values()) {
             for (ValeurCartes valeur : ValeurCartes.values()) {
