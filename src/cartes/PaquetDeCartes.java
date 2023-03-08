@@ -6,6 +6,50 @@ Nom : Gagnon, Xavier; 2237610
  */
 package cartes;
 
-public class PaquetDeCartes {
+import java.util.List;
 
+public class PaquetDeCartes {
+    public static final int NBR_ECAHNGE = 100;
+
+    private List<Carte> paquet;
+
+    public PaquetDeCartes(List<Carte> paquet) {
+
+    }
+
+    public PaquetDeCartes() {
+
+    }
+
+    public void brasser() {
+
+    }
+
+    public Carte consulterCarte(int position) {
+        return new Carte(SorteCartes.CARREAU, ValeurCartes.V_10); // ***** A CHANGER ********
+    }
+
+    public boolean isEmpty() {
+        return paquet.isEmpty();
+    }
+
+    private void permuterCartE(int posA, int posB) {
+
+    }
+
+    public Carte prendreCarte() {
+        return new Carte(SorteCartes.CARREAU, ValeurCartes.V_10); // ***** A CHANGER ********
+    }
+
+    public void retournerTouteLesCartes(boolean valeur) {
+
+    }
+
+    public int size() {
+        return paquet.size();
+    }
+
+    private boolean validerPosition(int position) {
+        return true; // ****** À CHANGER *******
+    }
 }
