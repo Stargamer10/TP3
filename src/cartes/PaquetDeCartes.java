@@ -6,6 +6,8 @@ Nom : Gagnon, Xavier; 2237610
  */
 package cartes;
 
+import exceptions.ConstructeurException;
+
 import java.util.ArrayList;
 
 public class PaquetDeCartes {
@@ -14,7 +16,10 @@ public class PaquetDeCartes {
     private ArrayList<Carte> paquet;
 
     public PaquetDeCartes(ArrayList<Carte> paquet) {
-        this.paquet = paquet;
+        if(paquet != null)
+            this.paquet = paquet;
+        else
+            throw new ConstructeurException("Un paquet reçu en argument ne peut pas être vide");
     }
 
     public PaquetDeCartes() {
