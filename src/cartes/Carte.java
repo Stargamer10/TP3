@@ -38,6 +38,14 @@ public class Carte implements Comparable<Carte> {
         return valeur.getSymbole();
     }
 
+    private void setSorte(SorteCartes sorte) {
+        this.sorte = sorte;
+    }
+
+    private void setValeur(ValeurCartes valeur) {
+        this.valeur = valeur;
+    }
+
     public void setVisible(boolean visible) {
         this.visible = visible;
     }
