@@ -14,4 +14,7 @@ public enum ValeurCartes{
     V_JACK("J", 11),
     V_QUEEN("Q", 12),
     V_KING("K", 13);
+
+    ValeurCartes(String s, int i) {
+    }
 }

@@ -8,4 +8,7 @@ public enum SorteCartes
     CARREAU('\u2666', Color.RED),
     PIQUE('♠', Color.BLACK),
     TREFLE('♣', Color.BLACK);
+
+    SorteCartes(char c, Color col) {
+    }
 }
