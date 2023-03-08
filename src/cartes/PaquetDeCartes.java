@@ -6,19 +6,26 @@ Nom : Gagnon, Xavier; 2237610
  */
 package cartes;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PaquetDeCartes {
     public static final int NBR_ECAHNGE = 100;
 
-    private List<Carte> paquet;
+    private ArrayList<Carte> paquet;
 
     public PaquetDeCartes(List<Carte> paquet) {
 
     }
 
     public PaquetDeCartes() {
+        paquet = new ArrayList<Carte>();
 
+        for(SorteCartes sorte : SorteCartes.values()) {
+            for(ValeurCartes valeur : ValeurCartes.values()) {
+                paquet.add(new Carte(sorte, valeur));
+            }
+        }
     }
 
     public void brasser() {
