@@ -1,4 +1,4 @@
-package java.structures.pile;
+package exceptions;
 
 public class PileException extends RuntimeException {
     PileException() {
