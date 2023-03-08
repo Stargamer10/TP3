@@ -53,7 +53,11 @@ public class PaquetDeCartes {
     }
 
     public Carte prendreCarte( int position) {
-        return paquet.remove(position);
+        if (!paquet.isEmpty() && validerPosition(position)) {
+            return paquet.remove(position);
+        } else {
+            return null;
+        }
     }
 
     public void retournerTouteLesCartes(boolean visible) {
