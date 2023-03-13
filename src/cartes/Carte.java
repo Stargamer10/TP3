@@ -53,15 +53,17 @@ public class Carte implements Comparable<Carte> {
     @Override
     public String toString() {
         return "Carte{" +
-                "sorte=" + sorte +
-                ", valeur=" + valeur +
+                "sorte symbole=" + sorte.symbole +
+                ", sorte couleur= rouge:" + sorte.couleur.getRed() + " bleu:" + sorte.couleur.getBlue()+ " vert:" + sorte.couleur.getGreen() +
+                ", valeur symbole=" + valeur.getSymbole() +
+                ", valeur valeur=" + valeur.getValeur() +
                 ", visible=" + visible +
                 '}';
     }
 
     public String toStringCarte() {
         if (visible) {
-            return sorte.toString() + " " + valeur.toString();
+            return sorte.toString() + ", " + valeur.toString();
         } else {
             return String.valueOf(IMAGE_DOS);
         }

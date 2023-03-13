@@ -10,7 +10,7 @@ import java.awt.Color;
 
 public enum SorteCartes {
     COEUR('♥', Color.RED),
-    CARREAU('\u2666', Color.RED),
+    CARREAU('♦', Color.RED),
     PIQUE('♠', Color.BLACK),
     TREFLE('♣', Color.BLACK);
 
@@ -31,6 +31,6 @@ public enum SorteCartes {
     }
 
     public String toString() {
-        return symbole + " " + couleur;
+        return symbole + " rouge:" + SorteCartes.COEUR.couleur.getRed() + " bleu:" + SorteCartes.COEUR.couleur.getBlue()+ " vert:" + SorteCartes.COEUR.couleur.getGreen();
     }
 }

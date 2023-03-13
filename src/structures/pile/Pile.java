@@ -14,7 +14,7 @@ public class Pile {
 
     public Object peek() {
         if (empty()) {
-            throw new PileException("Le pile est vide - Vous ne pouvez pas reguarder la valeuur");
+            throw new PileException("Le pile est vide - Vous ne pouvez pas regarder la valeur");
         }
 
         return sommet.getElement();

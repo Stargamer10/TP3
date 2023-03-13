@@ -39,19 +39,19 @@ class PileTest {
 
         try {
             for (int i = 0; i < tabObj.length; i++) {
-                assertFalse(pile.empty()); // La pile se considêre-elle vide avant de l'être?
+                assertFalse(pile.empty()); // La pile se considère-t-elle vide avant de l'être?
                 pile.pop();
             }
         } catch (IndexOutOfBoundsException e) {
             fail("La pile ne stocke pas les objets correctement");
         }
 
-        // On verifie si la pile est vide quand elle l'est
+        // On vérifie si la pile est vide quand elle l'est
         assertTrue(pile.empty());
     }
 
     @Test
-    void peek_RetourneLeBonOjbet() {
+    void peek_RetourneLeBonObjet() {
         Object expected;
         Object actual;
 
@@ -80,7 +80,7 @@ class PileTest {
             for (int i = 0; i < tabObj.length; i++) {
                 actual = pile.pop();
                 if (i > 0) {
-                    // La valeur reoutnré par pop() est-elle la bonne valeur?
+                    // La valeur retournée par pop() est-elle la bonne valeur?
                     expected = tabObj[(tabObj.length - 1) - i];
                     assertEquals(expected, actual);
                 }
@@ -95,7 +95,7 @@ class PileTest {
         int expected;
         int actual;
 
-        // Une liste remplit possède-elle la bonnen longueur?
+        // Une liste remplie possède-t-elle la bonne longueur?
         Pile pile = new Pile();
         for (int i = 0; i < tabObj.length; i++) {
             pile.push(tabObj[i]);
