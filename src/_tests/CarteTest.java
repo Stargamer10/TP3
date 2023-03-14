@@ -54,6 +54,16 @@ class CarteTest {
 
     @Test
     void compareTo() {
-        //todo
+        carte.setVisible(true);
+        Carte c2 = new Carte(SorteCartes.COEUR, ValeurCartes.V_AS);
+        c2.setVisible(true);
+
+        assertTrue(carte.compareTo(c2) == 0);
+
+        c2 = new Carte(SorteCartes.COEUR, ValeurCartes.V_2);
+        assertTrue(carte.compareTo(c2) < 0);
+
+        c2 = new Carte(SorteCartes.CARREAU, ValeurCartes.V_AS);
+        assertTrue(carte.compareTo(c2) < 0);
     }
 }

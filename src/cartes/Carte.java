@@ -80,7 +80,7 @@ public class Carte implements Comparable<Carte> {
 
     @Override
     public int compareTo(Carte o) {
-        if (this.equals(o)) {
+        if (this.sorte.equals(o.sorte)) {
             return valeur.compareTo(o.valeur);
         } else {
             return sorte.compareTo(o.sorte);
