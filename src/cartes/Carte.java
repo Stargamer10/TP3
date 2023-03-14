@@ -16,6 +16,7 @@ public class Carte implements Comparable<Carte> {
     public Carte(SorteCartes sorte, ValeurCartes valeur) {
         this.sorte = sorte;
         this.valeur = valeur;
+        visible = false;
     }
 
     public boolean estVisible() {
@@ -63,7 +64,7 @@ public class Carte implements Comparable<Carte> {
 
     public String toStringCarte() {
         if (visible) {
-            return sorte.toString() + ", " + valeur.toString();
+            return sorte.symbole + " " + valeur.getSymbole();
         } else {
             return String.valueOf(IMAGE_DOS);
         }
