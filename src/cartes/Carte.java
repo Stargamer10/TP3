@@ -55,7 +55,7 @@ public class Carte implements Comparable<Carte> {
     public String toString() {
         return "Carte{" +
                 "sorte symbole=" + sorte.symbole +
-                ", sorte couleur= rouge:" + sorte.couleur.getRed() + " bleu:" + sorte.couleur.getBlue()+ " vert:" + sorte.couleur.getGreen() +
+                ", sorte couleur= rouge:" + sorte.couleur.getRed() + " bleu:" + sorte.couleur.getBlue() + " vert:" + sorte.couleur.getGreen() +
                 ", valeur symbole=" + valeur.getSymbole() +
                 ", valeur valeur=" + valeur.getValeur() +
                 ", visible=" + visible +

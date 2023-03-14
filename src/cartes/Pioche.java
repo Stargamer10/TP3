@@ -12,6 +12,7 @@ public class Pioche {
     private Pile pioche;
 
     public Pioche(PaquetDeCartes paquet) {
+        pioche = new Pile();
         for (int i = 0; i < paquet.size(); i++) {
             pioche.push(paquet.consulterCarte(i));
         }
@@ -22,11 +23,11 @@ public class Pioche {
     }
 
     public boolean isEmpty() {
-        return  pioche.empty();
+        return pioche.empty();
     }
 
     public String consulterDessus() {
-        return ((Carte) pioche.peek()).toString();
+        return ((Carte) pioche.peek()).toStringCarte();
     }
 
     public int size() {

@@ -31,6 +31,6 @@ public enum SorteCartes {
     }
 
     public String toString() {
-        return symbole + " rouge:" + SorteCartes.COEUR.couleur.getRed() + " bleu:" + SorteCartes.COEUR.couleur.getBlue()+ " vert:" + SorteCartes.COEUR.couleur.getGreen();
+        return symbole + " rouge:" + SorteCartes.COEUR.couleur.getRed() + " bleu:" + SorteCartes.COEUR.couleur.getBlue() + " vert:" + SorteCartes.COEUR.couleur.getGreen();
     }
 }

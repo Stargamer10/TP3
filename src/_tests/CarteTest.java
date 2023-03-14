@@ -13,7 +13,7 @@ class CarteTest {
     void testToString_LesProprietesSontAfficheesDeFaconComprehensible() {
         Object expected = "Carte{" +
                 "sorte symbole=" + SorteCartes.COEUR.symbole +
-                ", sorte couleur= rouge:" + SorteCartes.COEUR.couleur.getRed() + " bleu:" + SorteCartes.COEUR.couleur.getBlue()+ " vert:" + SorteCartes.COEUR.couleur.getGreen() +
+                ", sorte couleur= rouge:" + SorteCartes.COEUR.couleur.getRed() + " bleu:" + SorteCartes.COEUR.couleur.getBlue() + " vert:" + SorteCartes.COEUR.couleur.getGreen() +
                 ", valeur symbole=" + ValeurCartes.V_AS.getSymbole() +
                 ", valeur valeur=" + ValeurCartes.V_AS.getValeur() +
                 ", visible=" + false +
